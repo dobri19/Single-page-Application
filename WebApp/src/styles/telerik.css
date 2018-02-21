@@ -1,0 +1,12 @@
+html {
+    font-size: 40px;
+}
+
+#main-container {
+    font-size: 0.5rem;
+    padding: 30px;
+}
+
+#main-container a {
+    font-size: 0.5rem
+}
