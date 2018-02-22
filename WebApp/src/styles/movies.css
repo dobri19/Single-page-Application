@@ -15,3 +15,10 @@
     background-color: white;
     margin-left: 5%;
 }
+
+.mySlides {display:none;}
+
+.slider{
+    width: 100vh;
+    height: 100vh;
+}
