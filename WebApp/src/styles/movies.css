@@ -1,7 +1,7 @@
 #header {
     width: 100%;
     height: 10%;
-    background-color: purple;
+    background-color: rgb(255, 255, 255);
 }
 
 #header-container {
@@ -11,14 +11,32 @@
 
 #logo {
     width: 30px;
-    height:30px;
+    height: 30px;
     background-color: white;
     margin-left: 5%;
 }
 
-.mySlides {display:none;}
+.mySlides {
+    display: none;
+    background-position: center bottom;
+    width: 100%;
+    height: 600px;
+}
 
-.slider{
-    width: 100vh;
-    height: 100vh;
+.slider {
+    width: 100%;
+    height: 300px;
+}
+
+.hide {
+    display: inline-flex;
+}
+
+.over {
+    position: relative;
+    z-index: 1;
+}
+
+.image-logo {
+    margin-left: 10px;
 }
