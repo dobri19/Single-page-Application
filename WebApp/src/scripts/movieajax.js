@@ -14,22 +14,17 @@ function callApi(title) {
         let title = data.Title;
         let year = data.Year;
 
-        //let poster = data.Poster;
+        let imgTag = $('#my-img-tag-0')
+            .attr('src', data.Poster)
+            .css({
+                width: '300px',
+                height: '300px'
+            });
 
         if (title !== undefined || year !== undefines) {
             $('.result').append('title: ' + title + ', ' + 'year: ' + year + '  ');
         };
+
     };
-}
+};
 
-// function callApiImg(title) {
-//     $.get(`http://img.omdbapi.com/?t${title}&apikey=1c4993a8`).then(renderHtml);
-
-//     function renderHtml(data) {
-//         console.log(data);
-//         let title = data.;
-//         if (title !== undefined || year !== undefines) {
-//             $('.result').append('title: ' + title + ', ' + 'year: ' + year + '  ');
-//         };
-//     };
-// }
