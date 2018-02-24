@@ -33,30 +33,37 @@
             <a class="navbar-brand" href="#">
                 <img class="image-logo" width="40" height="40" src="https://image.flaticon.com/icons/svg/31/31106.svg" alt="">
             </a>
-
             <ul class="right hide-on-med-and-down">
                 <spam id="hide">
+                    <li>
+                        <a class="waves-effect waves-light btn">
+                            <div class="input-field">
+                                <input id="search" type="search" required>
+                                <label class="label-icon" for="search"><i class="material-icons">search</i></label>
+                            </div>
+                        </a>
+                    </li>
+
                     <li><a class="waves-effect waves-light btn">Add</a></li>
                     <li><a class="waves-effect waves-light btn">Movies</a></li>
-                    <li><a class="waves-effect waves-light btn">Search</a></li>
                 </spam>
-                <li><a id="button" class="waves-effect waves-light btn-large">User</a></li>
+                <li><a id="button" class="waves-effect waves-light btn-large">LogIn</a></li>
             </ul>
         </div>
     </nav>
 
-    <div class="result">description: </div>
+    <div class="result"></div>
 
     <img id="my-img-tag-0" src="" alt="">
 
-    <div class="slider " style="max-width:100% ">
-        <img class="mySlides " src="./images/1trans.jpg ">
-        <img class="mySlides " src="./images/2avengers.jpg ">
-        <img class=" mySlides " src="./images/3hobbit.jpg ">
-        <img class="mySlides " src="./images/4war.jpg ">
+    <div id="hide" class="slider " style="max-width:100% ">
+        <img id="hide" class="mySlides " src="./images/1trans.jpg ">
+        <img id="hide" class="mySlides " src="./images/2avengers.jpg ">
+        <img id="hide" class=" mySlides " src="./images/3hobbit.jpg ">
+        <img id="hide" class="mySlides " src="./images/4war.jpg ">
     </div>
 
-    <nav>
+    <!-- <nav>
         <div class="nav-wrapper">
             <form>
                 <div class="input-field">
@@ -66,11 +73,12 @@
                 </div>
             </form>
         </div>
-    </nav>
+    </nav> -->
 
     <script src="./scripts/carousel.js "></script>
     <script src="./scripts/buttonhiding.js "></script>
     <script src="./scripts/movieajax.js "></script>
+    <script src="js/contact.js"></script>
 </body>
 
 </html>
