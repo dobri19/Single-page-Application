@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="./css/movie.css">
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous">
+
+
+    </script>
+
+</head>
+
+<body>
+
+    <div class="topnav">
+
+        <a id="button" class="active" href="#home">Home</a>
+        <a id="movies" class="movies" href="#about" type="button">Movies</a>
+        <a id="hide" href="#contact">Add</a>
+        <a id="reset" class="movies" href="#about" type="button">Reset</a>
+
+        <a class="navbar-brand" href="#">
+            <img class="image-logo" width="30" height="20" src="https://image.flaticon.com/icons/svg/31/31106.svg" alt="">
+        </a>
+
+        <div id="hide" class="search-container">
+            <div>
+                <input id="search" type="text" placeholder="Search movies..." name="search">
+                <button type="submit" id="search-button"><i class="fa fa-search"></i></button>
+            </div>
+        </div>
+
+    </div>
+
+    <div style="display: center; text-align: center;">
+        <div class="result" style="display: center"></div>
+        <img id="my-img-tag-0" src="" alt="">
+        <div>
+            <button id="add-movie" style="display: none">Add</button>
+        </div>
+    </div>
+
+    <div id="collection">
+
+    </div>
+
+    <!-- <div id="hide" class="slider " style="max-width:80% ">
+        <img id="hide" class="mySlides " src="./images/1trans.jpg ">
+        <img id="hide" class="mySlides " src="./images/2avengers.jpg ">
+        <img id="hide" class=" mySlides " src="./images/3hobbit.jpg ">
+        <img id="hide" class="mySlides " src="./images/4war.jpg ">
+    </div> -->
+
+    <script src="./scripts/movieajax.js "></script>
+</body>
+
+</html>
