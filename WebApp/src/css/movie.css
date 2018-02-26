@@ -84,3 +84,29 @@ body {
         border: 1px solid #ccc;
     }
 }
+
+#my-img-tag-0{
+    width: 300px;
+    height: 450px;
+    transition: transform .2s;
+    position: relative;
+    /* float: left; */
+
+}
+
+#my-img-tag-0:hover{
+    transform: scale(1.02);
+}
+
+#infoto{
+    
+    display: inline block;
+}
+#infoto .result{
+    float: right;
+    display: inline block;
+}
+
+#myMessage{
+    float: none;
+}
