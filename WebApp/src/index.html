@@ -3,57 +3,87 @@
 
 <head>
 
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="./css/movie.css">
-    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous">
-
-
-    </script>
-
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+    <style>
+        /* Make the image fully responsive */
+    .carousel-inner img {
+        width: 100%;
+        height: 100%;
+    }
+    .btn-small {
+        font-size: 10px;
+        line-height: normal;
+        display: none;
+    }
+    </style>
 </head>
 
 <body>
-
-    <div class="topnav">
-
-        <a id="button" class="active" href="#home">Home</a>
-        <a id="movies" class="movies" href="#about" type="button">Movie Collection</a>
-        <!-- <a id="hide" href="#contact">Add</a> -->
-        <a id="reset" class="reset" href="#about" type="button">Reset Collection</a>
-
-        <a class="navbar-brand" href="#">
-            <img class="image-logo" width="30" height="20" src="https://image.flaticon.com/icons/svg/31/31106.svg" alt="">
+    <nav class="navbar bg-light navbar-light">
+        <a class="navbar-brand" id="homepagebutton" href="#">
+            <img src="https://image.flaticon.com/icons/svg/31/31106.svg" alt="logo" style="width:40px;">
         </a>
-
-        <div id="hide" class="search-container">
-            <div>
-                <input id="search" type="text" placeholder="Search movies..." name="search">
-                <button type="submit" id="search-button"><i class="fa fa-search"></i></button>
-            </div>
+        <div class="form-inline my-2 my-lg-0">
+            <button type="button" class="btn btn-dark">User</button>
         </div>
+    </nav>
 
+    <br>
+    <br>
+    <div class="container" id="dynamic">
+            <div class="row">
+                    <div class="col-md-2">
+                            <div class="card">
+                                    <img class="card-img-top" src="https://image.flaticon.com/icons/svg/31/31106.svg" alt="Card image cap">
+                                    <div class="card-block">
+                                            <p>E: </p><p>S: </p>
+                                            <button type="button" class="btn btn-danger btn-primary btn-small float-right">Delete</button>
+                                    </div>  
+                                  </div>
+                    </div>
+                    <div class="col-md-2">
+                            <div class="card">
+                                    <img class="card-img-top" src="https://image.flaticon.com/icons/svg/31/31106.svg" alt="Card image cap">
+                                    <div class="card-block">
+                                            <p>E: </p><p>S: </p>
+                                            <button type="button" class="btn btn-danger btn-primary btn-small float-right">Delete</button>
+                                    </div>  
+                                  </div>
+                    </div>
+                    
+                    <div class="col-md-2">
+                            <div class="card">
+                                    <img class="card-img-top" src="https://image.flaticon.com/icons/svg/31/31106.svg" alt="Card image cap">
+                                    <div class="card-block">
+                                            <p>E: </p><p>S: </p>
+                                            <button type="button" class="btn btn-danger btn-primary btn-small float-right">Delete</button>
+                                    </div>  
+                                  </div>
+                    </div>
+                    
+                    <div class="col-md-2">
+                            <div class="card">
+                                    <img class="card-img-top" src="https://image.flaticon.com/icons/svg/31/31106.svg" alt="Card image cap">
+                                    <div class="card-block">
+                                            <p>E: </p><p>S: </p>
+                                            <button type="button" class="btn btn-danger btn-primary btn-small float-right">Delete</button>
+                                    </div>  
+                                  </div>
+                    </div>
+                </div>
+                
     </div>
-
-    <div id="infoto" style="display: center; text-align: center;">
-        <div id="infoto" class="result" style="display: center"></div>
-        <img id="my-img-tag-0" src="" alt="">
-        <div>
-            <button id="add-movie" style="display: none">Add Movie</button>
-        </div>
-    </div>
-
-    <div id="collection">
-
-    </div>
-
-    <!-- <div id="hide" class="slider " style="max-width:80% ">
-        <img id="hide" class="mySlides " src="./images/1trans.jpg ">
-        <img id="hide" class="mySlides " src="./images/2avengers.jpg ">
-        <img id="hide" class=" mySlides " src="./images/3hobbit.jpg ">
-        <img id="hide" class="mySlides " src="./images/4war.jpg ">
-    </div> -->
 
     <script src="./scripts/movieajax.js "></script>
+    <script src="./scripts/homepageHTML.js"></script>
+    <script src="./scripts/deletebutton.js"></script>
+    <script src="./scripts/navbar.js"></script>
 </body>
 
 </html>
