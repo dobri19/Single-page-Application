@@ -1,0 +1,2 @@
+var resultDataBase = [];
+var userDataBase = [];

@@ -1,3 +1,5 @@
+var resultDataBase = [];
+
 $('#reset').click(function() {
     window.localStorage.clear();
     $('#collection').empty();
@@ -64,9 +66,8 @@ $('#add-movie').click(function() {
             parsedPersistentData.push(parsedData);
             window.localStorage.setItem('savedMovies', JSON.stringify(parsedPersistentData));
             $('#myMessage').html('Film were added in to collection');
-            
-        }
-        else{
+
+        } else {
             $('#myMessage').html('Sorry you have alredy this film');
         }
     }
@@ -82,11 +83,36 @@ $('#add-movie').click(function() {
 function callApi(title) {
     $.get(`http://www.omdbapi.com/?t=${title}&apikey=1c4993a8`).then(renderHtml);
     //----------Test
-    var dData = $.get(`http://www.omdbapi.com/?apikey=1c4993a8&s=${title}&type=movie`);
-    
-    console.log(dData);
-    
-///-------End of test
+    var dData = $.getJSON(`http://www.omdbapi.com/?apikey=1c4993a8&s=${title}&type=movie&r=json`, function(data) {
+        var searchResults = data.Search;
+        //Making results
+        for (let i = 0; i < searchResults.length; i++) {
+            // console.log('for');
+            //Getting movies by ID
+            const movieID = searchResults[i].imdbID;
+            const curentMovieUrl = `http://www.omdbapi.com/?i=${movieID}&apikey=1c4993a8`;
+            const newMovie = $.get(curentMovieUrl, function(data) {
+                resultDataBase.push(data);
+                
+                // $('#search-results').prepend(
+                //      `<p><img  width="40" height="80" src="${data.Poster}"/>   ${data.Title}` 
+                // );
+            });
+            // resultDataBase.push(newMovie);
+               
+            // console.log(newMovie);
+        }
+        console.log(resultDataBase); 
+
+    });
+
+
+
+
+
+
+
+    ///-------End of test
     function renderHtml(data) {
         // console.log(data);
         let title = data.Title;
@@ -140,25 +166,30 @@ function callApi(title) {
     };
 };
 
-function check(title) {
-    if (localStorage.savedMovies === null) {
-        console.log('Sorry!');
-        return false;
-    } else {
-        let sMovies = JSON.parse(localStorage.savedMovies);
-        for (let i = 0; i < sMovies.length; i++) {
-            let titleBase = sMovies[i].Title;
-            if (title == titleBase) {
-                $('#add-movie').hide();
-                console.log('hidden');
-                $('#myMessage').html('Sorry! Youve already have this movie!');
-                return true;
-            } else {
-                return false;
-            }
-            // console.log
-        }
-        console.log('check');
-    }
 
-}
+
+
+
+
+// function check(title) {
+//     if (localStorage.savedMovies === null) {
+//         console.log('Sorry!');
+//         return false;
+//     } else {
+//         let sMovies = JSON.parse(localStorage.savedMovies);
+//         for (let i = 0; i < sMovies.length; i++) {
+//             let titleBase = sMovies[i].Title;
+//             if (title == titleBase) {
+//                 $('#add-movie').hide();
+//                 console.log('hidden');
+//                 $('#myMessage').html('Sorry! Youve already have this movie!');
+//                 return true;
+//             } else {
+//                 return false;
+//             }
+//             // console.log
+//         }
+//         console.log('check');
+//     }
+
+// }
