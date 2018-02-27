@@ -21,69 +21,46 @@
         line-height: normal;
         display: none;
     }
+    .bottom-right {
+        position:absolute;
+    bottom:0;
+    right:0;
+    }
+
+    .table{
+    border: 2px solid silver;
+    }
+
     </style>
 </head>
 
 <body>
     <nav class="navbar bg-light navbar-light">
-        <a class="navbar-brand" id="homepagebutton" href="#">
+        <a id="homepagebutton" class="navbar-brand" href="#">
             <img src="https://image.flaticon.com/icons/svg/31/31106.svg" alt="logo" style="width:40px;">
         </a>
-        <div class="form-inline my-2 my-lg-0">
-            <button type="button" class="btn btn-dark">User</button>
+        <form class="form-right my-2 my-lg-0">
+            <input id="search" class="form-control mr-sm-2" type="text" placeholder="Search">
+        </form>
+        <div class="btn-inline my-2 my-lg-0">
+            <button type="button" id="userbutton" class="btn btn-dark">User</button>
         </div>
     </nav>
-
     <br>
     <br>
     <div class="container" id="dynamic">
-            <div class="row">
-                    <div class="col-md-2">
-                            <div class="card">
-                                    <img class="card-img-top" src="https://image.flaticon.com/icons/svg/31/31106.svg" alt="Card image cap">
-                                    <div class="card-block">
-                                            <p>E: </p><p>S: </p>
-                                            <button type="button" class="btn btn-danger btn-primary btn-small float-right">Delete</button>
-                                    </div>  
-                                  </div>
-                    </div>
-                    <div class="col-md-2">
-                            <div class="card">
-                                    <img class="card-img-top" src="https://image.flaticon.com/icons/svg/31/31106.svg" alt="Card image cap">
-                                    <div class="card-block">
-                                            <p>E: </p><p>S: </p>
-                                            <button type="button" class="btn btn-danger btn-primary btn-small float-right">Delete</button>
-                                    </div>  
-                                  </div>
-                    </div>
-                    
-                    <div class="col-md-2">
-                            <div class="card">
-                                    <img class="card-img-top" src="https://image.flaticon.com/icons/svg/31/31106.svg" alt="Card image cap">
-                                    <div class="card-block">
-                                            <p>E: </p><p>S: </p>
-                                            <button type="button" class="btn btn-danger btn-primary btn-small float-right">Delete</button>
-                                    </div>  
-                                  </div>
-                    </div>
-                    
-                    <div class="col-md-2">
-                            <div class="card">
-                                    <img class="card-img-top" src="https://image.flaticon.com/icons/svg/31/31106.svg" alt="Card image cap">
-                                    <div class="card-block">
-                                            <p>E: </p><p>S: </p>
-                                            <button type="button" class="btn btn-danger btn-primary btn-small float-right">Delete</button>
-                                    </div>  
-                                  </div>
-                    </div>
-                </div>
-                
+    
+    </div>    
+        
     </div>
-
+    <script src="./scripts/userCollection.js"></script>
     <script src="./scripts/movieajax.js "></script>
+    <script src="./scripts/search.js"></script>
     <script src="./scripts/homepageHTML.js"></script>
     <script src="./scripts/deletebutton.js"></script>
     <script src="./scripts/navbar.js"></script>
+    <script src="./scripts/searchresult.js"></script>
+    <script src="./scripts/searchAddButton.js"></script>
 </body>
 
 </html>
