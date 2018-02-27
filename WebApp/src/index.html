@@ -5,6 +5,7 @@
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="./css/movie.css">
+    <link rel="stylesheet" href="./css/cssreset.css">
     <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous">
 
 
@@ -17,49 +18,87 @@
     <div class="topnav">
 
         <a id="button" class="active" href="#home">Home</a>
-        <a id="movies" class="movies" href="#about" type="button">Movie Collection</a>
-        <!-- <a id="hide" href="#contact">Add</a> -->
-        <a id="reset" class="reset" href="#about" type="button">Reset Collection</a>
+        <a id="movies" class="movies" href="#movie" type="button">Movie Collection</a>
+        <a id="reset" class="reset" href="#reset" type="button">Reset Collection</a>
 
-        <a class="navbar-brand" href="#">
-            <img class="image-logo" width="30" height="20" src="https://image.flaticon.com/icons/svg/31/31106.svg" alt="">
+        <a href="#" class="contacts" type="button">
+            <img class="image-logo" src="https://image.flaticon.com/icons/svg/31/31106.svg" alt="logo">
         </a>
 
         <div id="hide" class="search-container">
-            <div>
+
+            <div id="moveLeft">
                 <input id="search" type="text" placeholder="Search movies..." name="search">
                 <button type="submit" id="search-button"><i class="fa fa-search"></i></button>
             </div>
+
         </div>
 
     </div>
 
-    <div id="infoto" style="display: center; text-align: center;">
-        <!-- <div id="infoto" class="result" style="display: center"></div> -->
+    <div id="infoto">
+
         <img id="my-img-tag-0" src="" alt="">
+
         <div>
-            <button id="add-movie" style="display: none">Add Movie</button>
+            <button id="add-movie">Add Movie</button>
         </div>
 
-        <div id="myMessage" class="result" style="display: center"></div>
+        <div id="myMessage" class="result"></div>
 
     </div>
 
-    <div id="collection">
+    <div id="collection"></div>
 
+    <div class="parent">
+        <img class="child" src="./images/planet.jpg" />
     </div>
 
-    <!-- <div id="hide" class="slider " style="max-width:80% ">
-        <img id="hide" class="mySlides " src="./images/1trans.jpg ">
-        <img id="hide" class="mySlides " src="./images/2avengers.jpg ">
-        <img id="hide" class=" mySlides " src="./images/3hobbit.jpg ">
-        <img id="hide" class="mySlides " src="./images/4war.jpg ">
-    </div> -->
+    <div class="contactInfo">
+        <h2 style="text-align: center;">Contact Us</h2>
+
+        <div class="persons">
+            <ul class="col">
+                <h3 class="name">
+                    Viacheslav
+                </h3>
+                <li>
+                    <img src="./images/download.jpg">
+                </li>
+                <li>
+                    <a>slava@gmail.com</a>
+                </li>
+            </ul>
+            <ul class="col">
+                <h3 class="name">
+                    Dobri The Panther
+                </h3>
+                <li>
+                    <img src="./images/ddd.jpg">
+                </li>
+                <li>
+                    <a>dobrivarbanov@gmail.com</a>
+                </li>
+            </ul>
+            <ul class="col">
+                <h3 class="name">
+                    Georgi Dimitrov
+                </h3>
+                <li>
+                    <img src="./images/424762.jpg">
+                </li>
+                <li>
+                    <a>georgidimitrov@yahoo.com</a>
+                </li>
+            </ul>
+        </div>
+    </div>
 
     <script src="./scripts/movieajax.js "></script>
     <script src="./scripts/resetAndShow.js "></script>
     <script src="./scripts/search.js "></script>
     <script src="./scripts/add.js "></script>
+
 </body>
 
 </html>
