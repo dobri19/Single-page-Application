@@ -21,6 +21,8 @@ $('#movies').click(function() {
 
 $('#search').on('keyup', function(event) {
     if (event.keyCode === 13) {
+        $('#search-results').empty();
+        
         const value = $(this).val().trim();
         callApi(value);
     }
@@ -30,12 +32,13 @@ $('#search').on('keyup', function(event) {
 
 $('#search-button').click(function() {
     const value = $('#search').val().trim();
+    $('#search-results').empty();
     callApi(value);
 
     $('#collection').hide();
 });
 
-$('#add-movie').click(function() {
+$('.button').click(function() {
 
     let data = window.sessionStorage.getItem('currentMovie');
     let parsedData = JSON.parse(data);
@@ -81,28 +84,56 @@ $('#add-movie').click(function() {
 });
 
 function callApi(title) {
+
     $.get(`http://www.omdbapi.com/?t=${title}&apikey=1c4993a8`).then(renderHtml);
     //----------Test
     var dData = $.getJSON(`http://www.omdbapi.com/?apikey=1c4993a8&s=${title}&type=movie&r=json`, function(data) {
         var searchResults = data.Search;
         //Making results
-        for (let i = 0; i < searchResults.length; i++) {
-            // console.log('for');
-            //Getting movies by ID
-            const movieID = searchResults[i].imdbID;
-            const curentMovieUrl = `http://www.omdbapi.com/?i=${movieID}&apikey=1c4993a8`;
-            const newMovie = $.get(curentMovieUrl, function(data) {
-                resultDataBase.push(data);
-                
-                // $('#search-results').prepend(
-                //      `<p><img  width="40" height="80" src="${data.Poster}"/>   ${data.Title}` 
-                // );
-            });
-            // resultDataBase.push(newMovie);
-               
-            // console.log(newMovie);
+        if (searchResults != undefined) {
+            for (let i = 0; i < searchResults.length; i++) {
+                // console.log('for');
+                //Getting movies by ID
+                const movieID = searchResults[i].imdbID;
+                const curentMovieUrl = `http://www.omdbapi.com/?i=${movieID}&apikey=1c4993a8`;
+                const newMovie = $.get(curentMovieUrl, function(data) {
+                    resultDataBase.push(data);
+                    console.log(data.Released)
+                    $('#search-results').append(
+                        `
+                        <div class="example-2 card">
+        <div class="wrapper" style="background: url(${data.Poster}) center/cover no-repeat">
+            <div class="header">
+                <div class="date">
+                    <span class="day">${data.Released}</span>
+                    
+                </div>
+                <ul class="menu-content">
+                    
+                </ul>
+            </div>
+            <div class="data">
+                <div class="content">
+                    <span class="author">${data.Director}</span>
+                    <h1 class="title"><a href="#">${data.Title}</a></h1>
+                    <p class="text">${data.Plot}</p>
+                    <a href="#" class="button">Add Movie</a>
+                </div>
+            </div>
+        </div>
+    </div>`
+                    );
+                });
+                // resultDataBase.push(newMovie);
+
+                // console.log(newMovie);
+            }
+        } else {
+            alert(`No results`)
         }
-        console.log(resultDataBase); 
+
+
+        console.log(resultDataBase);
 
     });
 
