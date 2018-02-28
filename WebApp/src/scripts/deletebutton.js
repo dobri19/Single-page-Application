@@ -16,7 +16,6 @@ $(`#dynamic`).on(`click`, `.top-right`, function(){
 
     movies.forEach(element => {
         index++;
-        console.log(`${element.imdbID} ?? ${id}`);
         if(element.imdbID == id){
             idToRemove = index;
         }
@@ -27,6 +26,6 @@ $(`#dynamic`).on(`click`, `.top-right`, function(){
     }
 
     window.localStorage.setItem(`savedMovies`, JSON.stringify(movies));
-    
+
     $(this.parentElement.parentElement).hide();
 });

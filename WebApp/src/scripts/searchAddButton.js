@@ -8,6 +8,7 @@ $(`#dynamic`).on(`click`, `.searchAdd`, function() {
         if(array == null)
         {
             let movies = [];
+            data[`episode`] = 0;
             movies.push(data);
             localStorage.setItem(`savedMovies`, JSON.stringify(movies));
         }
@@ -17,7 +18,8 @@ $(`#dynamic`).on(`click`, `.searchAdd`, function() {
                 return x.imdbID == data.imdbID;
             })
             if(filter.length < 1){
-            array.push(data)
+            data[`episode`] = 0;
+            array.push(data);
             localStorage.setItem(`savedMovies`, JSON.stringify(array));
             }
         }
