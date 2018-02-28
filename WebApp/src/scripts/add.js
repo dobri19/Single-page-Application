@@ -28,10 +28,10 @@
             if (filer.length < 1) {
                 parsedPersistentData.push(parsedData);
                 window.localStorage.setItem('savedMovies', JSON.stringify(parsedPersistentData));
-                $('#myMessage').html('Film was added into your collection!');
+                
 
             } else {
-                $('#myMessage').html('You have already added this film!');
+                
             }
         };
 

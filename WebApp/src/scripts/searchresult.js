@@ -1,4 +1,5 @@
 let buildResult = function(id, image, title, year, plot, inCollection) {
+    
     let htmlTrue =
         `<div class="row justify-content-md-center table " id="${id}">
         <div class="col"><img src="${image}"></div>
