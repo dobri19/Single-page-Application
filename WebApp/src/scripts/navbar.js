@@ -1,24 +1,31 @@
-$('#homepagebutton').click(function(){
-    console.log(`click`);
-    $(`#dynamic`).empty();
-    $('#dynamic').append(homepageHTML);
-});
+(function() {
 
-document.addEventListener('DOMContentLoaded', function() {
-     $('#dynamic').append(homepageHTML);
-}, false);
+    $('#homepagebutton').click(function() {
+        $('#dynamic').empty();
+        $('#dynamic').append(home.homepageHTML);
+    });
 
-let userLoggin = false;
-$('#userbutton').click(function(){
-    if(!userLoggin){
-        window.alert(`Logged In`);
-        userLoggin = true;
-    }
+    document.addEventListener('DOMContentLoaded', function() {
+        $('#dynamic').append(home.homepageHTML);
+    }, false);
 
-    $(`#dynamic`).empty();
-    let movies = JSON.parse(window.localStorage.getItem(`savedMovies`));
-    $(`#dynamic`).append(`<div class="row" id="moviesCollection"></div>`);
-    for(let i = 0; i < movies.length; i++){
-        $(`#moviesCollection`).append(buildUserCollection(movies[i].imdbID, movies[i].Poster, movies[i].episode));
-    }
-});
+    let userLoggin = false;
+
+    $('#userbutton').click(function() {
+        if (!userLoggin) {
+            window.alert('Logged In');
+            userLoggin = true;
+        }
+
+        $('#dynamic').empty();
+
+        let movies = JSON.parse(window.localStorage.getItem('savedMovies'));
+
+        $('#dynamic').append('<div class="row" id="moviesCollection"></div>');
+
+        for (let i = 0; i < movies.length; i++) {
+            $('#moviesCollection').append(collection.buildUserCollection(movies[i].imdbID, movies[i].Poster, movies[i].episode));
+        }
+    });
+
+})();

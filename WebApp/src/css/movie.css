@@ -1,49 +1,58 @@
-
 .carousel-inner img {
-width: 100%;
-height: 100%;
+    width: 100%;
+    height: 100%;
 }
+
 .btn-small {
-font-size: 10px;
-line-height: normal;
-display: none;
+    font-size: 10px;
+    line-height: normal;
+    display: none;
 }
+
 .bottom-right {
-position:absolute;
-right: 0;
-bottom: 0;
+    position: absolute;
+    right: 0;
+    bottom: 0;
 }
 
-.top-right{
-position:absolute;
-right: 0;
-top: 0;
-}
-.w-35{
-width: 35%!important;
+.top-right {
+    position: absolute;
+    right: 0;
+    top: 0;
 }
 
-#inlineFormImput{
-font-size: smaller;
-}
-.card-block{
-overflow: hidden;
+.w-35 {
+    width: 35% !important;
 }
 
-.episode{
-float: left;
+#inlineFormImput {
+    font-size: smaller;
 }
 
-.episodeInput{
-float: left;
-}
-.episodeTextInput{
-float: left;
+.card-block {
+    overflow: hidden;
 }
 
-.episodeTextInputContainer{
-float: left;
+.episode {
+    float: left;
 }
-.table{
-border: 2px solid silver;
+
+.episodeInput {
+    float: left;
+}
+
+.episodeTextInput {
+    float: left;
+}
+
+.episodeTextInputContainer {
+    float: left;
+}
+
+.table {
+    border: 2px solid silver;
+}
+
+#homepagebutton img {
+    width: 40px;
 }

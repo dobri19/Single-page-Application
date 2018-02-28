@@ -7,6 +7,8 @@
     },
     "extends": "jquery",
     "rules": {
+        "no-loop-func": ["off"],
+        "max-len": ["off"],
         "computed-property-spacing": ["off"],
         "array-bracket-spacing": ["off"],
         "no-undef": ["off"],
