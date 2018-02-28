@@ -4,9 +4,9 @@ $('#homepagebutton').click(function(){
     $('#dynamic').append(homepageHTML);
 });
 
-// document.addEventListener('DOMContentLoaded', function() {
-//     $('#dynamic').append(homepageHTML);
-// }, false);
+document.addEventListener('DOMContentLoaded', function() {
+     $('#dynamic').append(homepageHTML);
+}, false);
 
 let userLoggin = false;
 $('#userbutton').click(function(){

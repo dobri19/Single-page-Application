@@ -13,8 +13,13 @@ $(`#dynamic`).on(`click`, `.searchAdd`, function() {
         }
         else
         {
+            let filter = array.filter(function(x){
+                return x.imdbID == data.imdbID;
+            })
+            if(filter.length < 1){
             array.push(data)
             localStorage.setItem(`savedMovies`, JSON.stringify(array));
+            }
         }
     });
 });
