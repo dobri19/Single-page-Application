@@ -1,8 +1,10 @@
 $(`#dynamic`).on(`click`, `.searchAdd`, function() {
     let parent = this.parentElement.parentElement;
-
+    console.log(this);
+    $(this).replaceWith('<button type="button" class="float-right btn btn-secondary bottom-right searchAdd" disabled>Already Added</button>').fadeIn();
     $.getJSON(`http://www.omdbapi.com/?apikey=1c4993a8&i=${parent.getAttribute(`id`)}`, function(data) {
         console.log();
+        
         let array = JSON.parse(window.localStorage.getItem(`savedMovies`));
         if (array == null) {
             let movies = [];
@@ -18,6 +20,8 @@ $(`#dynamic`).on(`click`, `.searchAdd`, function() {
                 array.push(data);
                 localStorage.setItem(`savedMovies`, JSON.stringify(array));
             }
+            
         }
     });
+    
 });

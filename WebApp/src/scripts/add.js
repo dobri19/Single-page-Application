@@ -18,7 +18,7 @@
             array.push(parsedData);
 
             window.localStorage.setItem('savedMovies', JSON.stringify(array));
-            $('#myMessage').html(`Film ${parsedData.Title} was added! `);
+            
 
         } else {
             let sMovies = JSON.parse(localStorage.savedMovies);
@@ -36,7 +36,7 @@
         };
 
         $('#add-movie').hide();
-
+        console.log('Hiddddden');
         window.sessionStorage.clear();
     });
 })();
