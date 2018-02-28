@@ -3,86 +3,41 @@
 
 <head>
 
-    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./css/movie.css">
+    <link rel="stylesheet" href="./css/cssreset.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
-    <style>
-        /* Make the image fully responsive */
-    .carousel-inner img {
-        width: 100%;
-        height: 100%;
-    }
-    .btn-small {
-        font-size: 10px;
-        line-height: normal;
-        display: none;
-    }
-    .bottom-right {
-        position:absolute;
-        right: 0;
-        bottom: 0;
-    }
 
-    .top-right{
-        position:absolute;
-        right: 0;
-        top: 0;
-    }
-    .w-35{
-        width: 35%!important;
-    }
-
-    #inlineFormImput{
-        font-size: smaller;
-    }
-    .card-block{
-        overflow: hidden;
-    }
-
-    .episode{
-        float: left;
-    }
-
-    .episodeInput{
-        float: left;
-    }
-    .episodeTextInput{
-        float: left;
-    }
-
-    .episodeTextInputContainer{
-        float: left;
-    }
-    .table{
-    border: 2px solid silver;
-    }
-
-    </style>
 </head>
 
 <body>
+
     <nav class="navbar bg-light navbar-light">
+
         <a id="homepagebutton" class="navbar-brand" href="#">
             <img src="https://image.flaticon.com/icons/svg/31/31106.svg" alt="logo" style="width:40px;">
+           <!-- // <span>Trash</span> -->
         </a>
+
         <form class="form-right my-2 my-lg-0">
             <input id="search" class="form-control mr-sm-2" type="text" placeholder="Search">
         </form>
+
         <div class="btn-inline my-2 my-lg-0">
             <button type="button" id="userbutton" class="btn btn-dark">User</button>
         </div>
+
     </nav>
+
     <br>
     <br>
-    <div class="container" id="dynamic">
-        
-    </div>    
-        
-    </div>
+
+    <div class="container" id="dynamic"></div>
+
     <script src="./scripts/userCollection.js"></script>
     <script src="./scripts/movieajax.js "></script>
     <script src="./scripts/search.js"></script>
@@ -90,8 +45,9 @@
     <script src="./scripts/deletebutton.js"></script>
     <script src="./scripts/navbar.js"></script>
     <script src="./scripts/searchresult.js"></script>
-    <script src="./scripts/EpisodeAndSeriesButton.js"></script>
+    <script src="./scripts/episodeAndSeriesButton.js"></script>
     <script src="./scripts/searchAddButton.js"></script>
+
 </body>
 
 </html>
