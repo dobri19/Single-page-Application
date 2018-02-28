@@ -1,134 +1,49 @@
-body {
-    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-    font-size: 14px;
-    line-height: 1.428571429;
-    color: #333;
-    background-color: #ffffff;
+
+.carousel-inner img {
+width: 100%;
+height: 100%;
+}
+.btn-small {
+font-size: 10px;
+line-height: normal;
+display: none;
+}
+.bottom-right {
+position:absolute;
+right: 0;
+bottom: 0;
 }
 
-* {
-    box-sizing: border-box;
+.top-right{
+position:absolute;
+right: 0;
+top: 0;
+}
+.w-35{
+width: 35%!important;
 }
 
-body {
-    margin: 0;
-    font-family: Arial, Helvetica, sans-serif;
+#inlineFormImput{
+font-size: smaller;
+}
+.card-block{
+overflow: hidden;
 }
 
-.topnav {
-    overflow: hidden;
-    background-color: #e9e9e9;
+.episode{
+float: left;
 }
 
-.topnav a {
-    float: left;
-    display: block;
-    color: black;
-    text-align: center;
-    padding: 14px 16px;
-    text-decoration: none;
-    font-size: 17px;
+.episodeInput{
+float: left;
+}
+.episodeTextInput{
+float: left;
 }
 
-.topnav a:hover {
-    background-color: #ddd;
-    color: black;
+.episodeTextInputContainer{
+float: left;
 }
-
-.topnav a.active {
-    background-color: #2196F3;
-    color: white;
-}
-
-.topnav .search-container {
-    float: right;
-    margin-left: 10;
-}
-
-.topnav input[type=text] {
-    padding: 6px;
-    margin-top: 8px;
-    font-size: 17px;
-    border: none;
-}
-
-.topnav .search-container button {
-    float: right;
-    padding: 6px 10px;
-    margin-top: 8px;
-    margin-right: 16px;
-    background: #ddd;
-    font-size: 17px;
-    border: none;
-    cursor: pointer;
-}
-
-.topnav .search-container button:hover {
-    background: #ccc;
-}
-
-@media screen and (max-width: 600px) {
-    .topnav .search-container {
-        float: none;
-    }
-    .topnav a,
-    .topnav input[type=text],
-    .topnav .search-container button {
-        float: none;
-        display: block;
-        text-align: left;
-        width: 100%;
-        margin: 0;
-        padding: 14px;
-    }
-    .topnav input[type=text] {
-        border: 1px solid #ccc;
-    }
-}
-
-.parent {
-    display: flex;
-    height: 500px;
-    background-color: rgb(255, 255, 255);
-}
-
-.child {
-    width: 1200px;
-    height: 500px;
-    margin: auto;
-}
-
-#moveLeft {
-    margin-left: 10px;
-}
-
-.image-logo {
-    float: right;
-    width: 40px;
-    height: 18px;
-}
-
-#myMessage {
-    display: center;
-}
-
-#infoto {
-    display: center;
-    text-align: center;
-}
-
-.persons ul li img {
-    width: 250px;
-}
-
-#add-movie {
-    display: none;
-}
-
-.contactInfo {
-    display: none;
-}
-
-.col {
-    margin-left: 500px;
+.table{
+border: 2px solid silver;
 }

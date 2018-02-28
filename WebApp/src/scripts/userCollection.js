@@ -1,5 +1,5 @@
-let buildUserCollection = function(id, image, episode){
-    let html =`
+let buildUserCollection = function(id, image, episode) {
+    let html = `
     <div class="col-md-2" id="${id}">
     <div class="card"">
     <img class="card-img-top" src=${image} alt="Card image cap">
