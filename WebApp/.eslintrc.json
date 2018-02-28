@@ -7,6 +7,7 @@
     },
     "extends": "jquery",
     "rules": {
+        "computed-property-spacing": ["off"],
         "array-bracket-spacing": ["off"],
         "no-undef": ["off"],
         "linebreak-style": ["off"],

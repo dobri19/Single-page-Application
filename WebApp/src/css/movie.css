@@ -3,7 +3,7 @@ body {
     font-size: 14px;
     line-height: 1.428571429;
     color: #333;
-    background-color: #daff84;
+    background-color: #ffffff;
 }
 
 * {
@@ -42,6 +42,7 @@ body {
 
 .topnav .search-container {
     float: right;
+    margin-left: 10;
 }
 
 .topnav input[type=text] {
@@ -83,4 +84,51 @@ body {
     .topnav input[type=text] {
         border: 1px solid #ccc;
     }
+}
+
+.parent {
+    display: flex;
+    height: 500px;
+    background-color: rgb(255, 255, 255);
+}
+
+.child {
+    width: 1200px;
+    height: 500px;
+    margin: auto;
+}
+
+#moveLeft {
+    margin-left: 10px;
+}
+
+.image-logo {
+    float: right;
+    width: 40px;
+    height: 18px;
+}
+
+#myMessage {
+    display: center;
+}
+
+#infoto {
+    display: center;
+    text-align: center;
+}
+
+.persons ul li img {
+    width: 250px;
+}
+
+#add-movie {
+    display: none;
+}
+
+.contactInfo {
+    display: none;
+}
+
+.col {
+    margin-left: 500px;
 }
