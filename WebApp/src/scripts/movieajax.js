@@ -6,7 +6,7 @@ $('#reset').click(function() {
 });
 
 $('#movies').click(function() {
-
+    $('#search-results').hide();
     $('#infoto').hide();
     let test = JSON.parse(localStorage.savedMovies);
 
@@ -22,7 +22,7 @@ $('#movies').click(function() {
 $('#search').on('keyup', function(event) {
     if (event.keyCode === 13) {
         $('#search-results').empty();
-        
+
         const value = $(this).val().trim();
         callApi(value);
     }
@@ -33,6 +33,7 @@ $('#search').on('keyup', function(event) {
 $('#search-button').click(function() {
     const value = $('#search').val().trim();
     $('#search-results').empty();
+    $('#search-results').show();
     callApi(value);
 
     $('#collection').hide();
@@ -102,9 +103,9 @@ function callApi(title) {
                     $('#search-results').append(
                         `
                         <div class="example-2 card">
-        <div class="wrapper" style="background: url(${data.Poster}) center/cover no-repeat">
-            <div class="header">
-                <div class="date">
+                        <div class="wrapper" style="background: url(${data.Poster}) center/cover no-repeat">
+                         <div class="header">
+                         <div class="date">
                     <span class="day">${data.Released}</span>
                     
                 </div>
