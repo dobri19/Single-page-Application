@@ -3,9 +3,8 @@ let api = (function() {
     let resultDataBase = [];
 
     function callApi(title) {
-
-        let dData = $.getJSON(`http://www.omdbapi.com/?apikey=1c4993a8&s=${title}&type=series&r=json`, function(data) {
-
+        
+        let dBase = $.getJSON(`http://www.omdbapi.com/?apikey=1c4993a8&s=${title}&type=series&r=json`, function(data) {
             let searchResults = data.Search;
             if (searchResults != null) {
                 for (let i = 0; i < searchResults.length; i++) {
