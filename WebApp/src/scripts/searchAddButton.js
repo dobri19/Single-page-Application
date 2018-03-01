@@ -4,7 +4,7 @@
 
         let parent = this.parentElement.parentElement;
 
-        $(this).replaceWith('<button type="button" class="float-right btn btn-secondary bottom-right searchAdd" disabled>Already Added</button>').fadeIn();
+        $(this).replaceWith('<button style="margin: 0px 10px 10px 0" type="button" class="float-right btn btn-secondary bottom-right searchAdd" disabled>Already Added</button>').fadeIn();
 
         $.getJSON(`http://www.omdbapi.com/?apikey=1c4993a8&i=${parent.getAttribute('id')}`, function(data) {
 
